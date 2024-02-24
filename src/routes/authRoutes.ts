@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken")
 
 const EMAIL_TOKEN_EXPIRATION_MIN = 10;
 const JWT_TOKEN_EXPIRATION_HRS = 12;
-const JWT_SECRET = "It is a super secret"
+const JWT_SECRET = process.env.JWT_SECRET|| 'SUPER SECRET';
 
 const router = Router()
 const prisma = new PrismaClient()

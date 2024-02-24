@@ -1,7 +1,10 @@
 import { Request, Response, NextFunction } from "express";
-const JWT_SECRET = "It is a super secret"
-const jwt = require("jsonwebtoken")
 import { PrismaClient, User } from "@prisma/client";
+
+
+const JWT_SECRET = process.env.JWT_SECRET|| 'SUPER SECRET';
+const jwt = require("jsonwebtoken")
+
 
 const prisma = new PrismaClient();
 
